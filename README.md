@@ -32,7 +32,79 @@ poetry run python -m spacy download en_core_web_sm
 ```
 > NOTE: Using a lightweight version for demonstration purposes. You can download a more robust English model folowing the guidelines from [this list](https://spacy.io/models/en).
 
-Finally, unzip the `ner-system.zip` file and copy/paste the `data`, `models` and `artifacts` directories at the project's root level. The following should be the final project structure after completing all these steps:
+Finally, unzip  provided `ner-system.zip` file and copy/paste the `data`, `models` and `artifacts` directories at the project's root level. The following should be the final project structure after completing all these steps:
+
+```
+C:.
+│   .env
+│   .gitignore
+│   LICENSE.md
+│   poetry.lock
+│   pyproject.toml
+│   README.md
+│   
+├───.pytest_cache
+│
+├───artifacts
+│       test_data.pkl
+│       test_tags.pkl
+│       train_data.pkl
+│       train_tags.pkl
+│       validation_data.pkl
+│       validation_tags.pkl
+│
+├───data
+│   ├───CoNLL003
+│   │       metadata
+│   │       test.txt
+│   │       train.txt
+│   │       valid.txt
+│   │
+│   └───DataWorld
+│           cnn_data.json
+│           cnn_data_sample.txt
+│
+├───models
+│       crf_model_vanilla.pkl
+|       crf_model_optim.pkl
+│
+├───ner_system
+│   │   api_init.py
+│   │   config.py
+│   │   data_models.py
+│   │   main.py
+│   │   utils.py
+│   │   __init__.py
+│   │
+│   ├───api
+│   │   │   ner.py
+│   │   │   sample_request.json
+│   │   │   sample_response.json
+│   │   │   __init__.py
+│   │   │
+│   │   └───__pycache__
+│   │
+│   ├───models
+│   │   │   pipeline.py
+│   │   │   __init__.py
+│   │   │
+│   │   └───__pycache__
+│   │        
+│   └───__pycache__
+│
+├───notebooks
+│       R&D_BERT+CRF_Model.ipynb
+│       R&D_CRF_Model.ipynb
+│
+└───tests
+    │   test_api.py
+    │   test_pipeline.py
+    │   test_request.py
+    │   __init__.py
+    │
+    └───__pycache__
+
+```
 
 ## Usage
 
