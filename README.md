@@ -73,7 +73,7 @@ poetry run python tests/test_request.py
 
 
 ## Reproducibility
-- Run the notebook `NER_CRF.ipynb` from top to bottom, which will produce a trained CRF model on the CoNNL2003 dataset, persisted into the `./models` folder. The corresponding artifacts are persisted on the `./artifacts` folder.
+- Run the notebook `./notebooks/R&D_CRF_Model.ipynb` from top to bottom, which will produce a trained CRF model on the CoNNL2003 dataset, persisted into the `./models` folder. The corresponding artifacts are persisted on the `./artifacts` folder.
 
     > NOTE: Make sure to run the notebook using the Kernel that contains the virtual environment activated by Poetry. For reference, it should start with the name `ner-system-XXXX`.
 
