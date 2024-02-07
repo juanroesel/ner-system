@@ -32,7 +32,9 @@ poetry run python -m spacy download en_core_web_sm
 ```
 > NOTE: Using a lightweight version for demonstration purposes. You can download a more robust English model folowing the guidelines from [this list](https://spacy.io/models/en).
 
-Finally, unzip  provided `ner-system.zip` file and copy/paste the `data`, `models` and `artifacts` directories at the project's root level. The following should be the final project structure after completing all these steps:
+Finally, unzip the provided `ner-system.zip` file and copy/paste the `data`, `models` and `artifacts` directories at the project's root level. If no such file was provided, create these directories at the root project level and follow the instructions on the `Reproducibility` section.
+
+The following should be the final project structure after completing all these steps:
 
 ```
 C:.
@@ -112,12 +114,13 @@ First, launch the NER System Application:
 ```
 poetry run python ner-system/main.py
 
-INFO:     Started server process [35220]
+INFO:     Started server process [5980]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
+INFO:     Uvicorn running on http://localhost:8000 (Press CTRL+C to quit)
 ```
 
-Open your browser and navigate to the following URL: http://localhost:8000. It should redirect to the API Documentation page located at URL http://localhost:8000/docs.
+Open your browser and navigate to the URL displayed on the terminal: http://localhost:8000. It should redirect to the API Documentation page located at URL http://localhost:8000/docs.
 
 The endpoint `/api/v0/ner/predict` is responsible for extracting entities from a payload containing news articles. Sample JSON files `sample_request.json` and `sample_response.json` have been provided inside the `./api` directory to illustrate the API schema as documented in localhost:8000/docs.
 
