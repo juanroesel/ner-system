@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "ner-system"
+version = "0.1.0"
+description = ""
+authors = ["juanroesel <juanroesel@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+datasets = "^2.16.1"
+transformers = "^4.37.2"
+python-dotenv = "^1.0.1"
+numpy = "^1.26.3"
+pytorch-crf = "^0.7.2"
+seqeval = "^1.2.2"
+torch = "2.0.0"
+flair = "^0.13.1"
+spacy = "^3.7.2"
+nltk = "^3.8.1"
+sklearn-crfsuite = {git = "https://github.com/MeMartijn/updated-sklearn-crfsuite.git"}
+fastapi = "^0.109.2"
+uvicorn = {extras = ["standard"], version = "^0.27.0.post1"}
+httpx = "^0.26.0"
+pytest = "^8.0.0"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
