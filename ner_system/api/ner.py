@@ -2,9 +2,9 @@ import logging
 from typing import Annotated
 
 from ner_system.config import NERConfig
-from ner_system.models.pipeline import CRFPipeline
+from ner_system.model.pipeline import CRFPipeline
 from ner_system.data_models import NERRequest, NERResponse
-from ner_system.models import init_resources
+from ner_system.model import init_resources
 
 from fastapi import APIRouter, Depends
 

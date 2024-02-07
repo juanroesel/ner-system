@@ -1,9 +1,9 @@
 import pytest
 
-from ner_system.models import init_resources
+from ner_system.model import init_resources
 from ner_system.config import NERConfig
 from ner_system.data_models import Article
-from ner_system.models.pipeline import CRFPipeline
+from ner_system.model.pipeline import CRFPipeline
 
 ### Unit tests for the CRFPipeline class ###
 
