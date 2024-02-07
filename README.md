@@ -124,6 +124,14 @@ Open your browser and navigate to the URL displayed on the terminal: http://loca
 
 The endpoint `/api/v0/ner/predict` is responsible for extracting entities from a payload containing news articles. Sample JSON files `sample_request.json` and `sample_response.json` have been provided inside the `./api` directory to illustrate the API schema as documented in localhost:8000/docs.
 
+With the application running, send a request to the API by running the file `./tests/test_request.py` using another terminal. First activate the Poetry shell and then run the following:
+
+```
+poetry run python tests/test_request.py
+```
+
+- Alternatively, you can use an API testing software like Postman to submit the request to the URL http://localhost:8000/api/v0/ner/predict, using the `sample_request.json` file located inside the `./api` folder as reference to fill in the `Body` parameters.
+
 ## Tests
 A simple unit test suite has been provided under the folder `./tests` and can be run using `PyTest`:
 
@@ -151,14 +159,6 @@ poetry run python tests/test_request.py
 - Run the notebook `./notebooks/R&D_CRF_Model.ipynb` from top to bottom, which will produce a trained CRF model on the CoNNL2003 dataset, persisted into the `./models` folder. The corresponding artifacts are persisted on the `./artifacts` folder.
 
     > NOTE: Make sure to run the notebook using the Kernel that contains the virtual environment activated by Poetry. For reference, it should start with the name `ner-system-XXXX`.
-
-- Launch the NER System API using the instructions provided in the `Usage` stage. Once it's running, send a request to the API by running the file `./tests/test_request.py`. You can use the Poetry shell as follows:
-
-```
-poetry run python tests/test_request.py
-```
-
-- Alternatively, you can use a software like Postman to submit the request, using the `sample_request.json` file located inside the `./api` folder as reference to fill the `Body` parameters.
 
 ## Contact
 For any questions, comments or bug reporting, please submit an issue or contact me at juan at helelab dot org.
